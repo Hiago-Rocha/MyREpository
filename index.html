@@ -6,6 +6,26 @@
     <title>Document</title>
 </head>
 <body>
+    <h1 class="nome" id="name">hiago</h1>
+    <h1 class="nome" id="name">Joao</h1>
+    <h1 class="nome" id="name">valeska</h1>
+    <h1 class="nome" id="name">lucas</h1>
+    <h1 class="nome" id="name">tobias</h1>
 
 </body>
+<script>
+    let i =0;
+    for(let iterator = 0;iterator< document.getElementsByClassName("nome").length ;iterator++)
+    {
+        listenerName(iterator)
+    }
+
+    function listenerName(it){
+        document.getElementsByClassName("nome")[it].addEventListener("click", ()=>{
+        console.log(it);
+        document.getElementsByClassName("nome")[it].style.color="#"+Math.floor(Math.random()*16777215).toString(16);
+        })
+    }
+
+</script>
 </html>
